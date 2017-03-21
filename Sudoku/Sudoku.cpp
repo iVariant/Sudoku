@@ -215,7 +215,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 		AppendMenu(MainMenu, MF_STRING | MF_POPUP, (UINT)hPopupMenu, L"&New Game");
 		{
-			AppendMenu(hPopupMenu, MF_STRING, ID_CLEAN, L"Clean");
+			AppendMenu(hPopupMenu, MF_STRING, ID_RESTART, L"Restart the game");
 			AppendMenu(hPopupMenu, MF_SEPARATOR, 1000, L"");
 
 			AppendMenu(hPopupMenu, MF_STRING, ID_NEWGAME_EASY, L"Easy");
@@ -530,10 +530,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		}
 		break;
 
-		case ID_CLEAN:
+		case ID_RESTART:
 		{
-				//createee
-
+			printSudoku(gameLevel);
 		}
 		break;
 
